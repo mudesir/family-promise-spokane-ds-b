@@ -9,8 +9,21 @@ pytest = "*"
 
 [packages]
 fastapi = "*"
-uvicorn = {extras = ["standard"], version = "*"}
 sqlalchemy = "*"
+numpy = "*"
+pandas = "*"
+jupyter = "*"
+jupyterlab = "*"
+matplotlib = "*"
+plotly-express = "*"
+seaborn = "*"
 
 [requires]
 python_version = "3"
+
+[packages.uvicorn]
+extras = [ "standard",]
+version = "*"
+
+[packages.pandas-profiling]
+extras = [ "notebook",]
