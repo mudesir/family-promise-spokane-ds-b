@@ -17,6 +17,8 @@ jupyterlab = "*"
 matplotlib = "*"
 plotly-express = "*"
 seaborn = "*"
+scikit-learn = "*"
+category-encoders = "*"
 
 [requires]
 python_version = "3"
