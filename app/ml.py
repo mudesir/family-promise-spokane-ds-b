@@ -64,7 +64,7 @@ async def predict(guest_info: PersonInfo):
                       'barrier_count_entry':'Barrier Count at Entry'},inplace=True)
 
     y_pred = random_forest_pipe.predict(X)
-    
+
     #feature Importances
     model = random_forest_pipe.named_steps['classifier']
     encoder = random_forest_pipe.named_steps['ord']
@@ -75,8 +75,6 @@ async def predict(guest_info: PersonInfo):
     for k,v in top_feats.items():
         feats[k] = v
 
-
-    predicted,features = prediction()
     return { 
         'personal_id': guest_info.personal_id,
         'exit_strategy': y_pred[0],
