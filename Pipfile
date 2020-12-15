@@ -19,6 +19,7 @@ plotly-express = "*"
 seaborn = "*"
 scikit-learn = "*"
 category-encoders = "*"
+joblib = "*"
 
 [requires]
 python_version = "3"
