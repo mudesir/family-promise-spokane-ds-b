@@ -10,6 +10,15 @@ pytest = "*"
 [packages]
 fastapi = "*"
 sqlalchemy = "*"
+numpy = "*"
+pandas = "*"
+jupyter = "*"
+jupyterlab = "*"
+matplotlib = "*"
+plotly-express = "*"
+seaborn = "*"
+scikit-learn = "*"
+category-encoders = "*"
 joblib = "*"
 
 [requires]
@@ -18,3 +27,9 @@ python_version = "3"
 [packages.uvicorn]
 extras = [ "standard",]
 version = "*"
+<<<<<<< HEAD
+=======
+
+[packages.pandas-profiling]
+extras = [ "notebook",]
+>>>>>>> 50f55802dd06a3039c9b5d111cc84a4139286915
