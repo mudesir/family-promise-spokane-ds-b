@@ -40,17 +40,15 @@ class PersonInfo(BaseModel):
 
 @router.post('/predict')
 async def predict(guest_info: PersonInfo):
-    '''# Data model PlaceHolder 
+    '''# Data model base working model 
        # Usage: 
          - member_id (integer) Exmple : 232314 #id from members table         
          - Request body Subject to change once a working model is in place
          - Post Method'''
         
     #Prediction Pipe
-    print(guest_info.member_id)
 
     results = db_manager.set_variables(guest_info.member_id)
-    print(results)
 
     random_forest_pipe = load('app/assets/randomforest_modelv3.pkl') #loads pickled model (using loblib)
     # df = guest_info.to_df()

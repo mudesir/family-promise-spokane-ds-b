@@ -33,9 +33,9 @@ def set_variables(member_id):
       results['demographics']['DOB'], '%m-%d-%Y').date()).days / 365.2425
       )
   results_dict['gender'] = results['demographics']['gender']
-  results_dict['length_of_stay'] = 'two to six days' #temporary placeholder to be changed. 
+  results_dict['length_of_stay'] = results['length_of_stay']
   results_dict['enrollment_length'] = int((today_date - results['date_of_enrollment']).days)
-  results_dict['household_type'] = 'Adults and children' #temporary placeholder to be changed. 
+  results_dict['household_type'] = results['household_type']
   results_dict['barrier_count'] = 0 
   
   for item in results['barriers'].values():
