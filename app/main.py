@@ -5,8 +5,10 @@ import uvicorn
 from app import db, ml, viz
 
 description = """
-To edit description after some endpoints has been added.
-Edit your app's title and description. See [https://fastapi.tiangolo.com/tutorial/metadata/](https://fastapi.tiangolo.com/tutorial/metadata/)
+This is our FastAPI DS API. to use the current api send a post request to 
+/getdata endpoint with the member_id. a predicted exit destination along with 
+top features will show in a JSON format. Below is an example on how to use it 
+interactively. 
 
 To use these interactive docs:
 - Click on an endpoint below
@@ -14,6 +16,10 @@ To use these interactive docs:
 - Edit the Request body or any parameters
 - Click the **Execute** button
 - Scroll down to see the Server response Code & Details
+
+To edit description after some endpoints has been added.
+Edit your app's title and description. See [https://fastapi.tiangolo.com/tutorial/metadata/](https://fastapi.tiangolo.com/tutorial/metadata/)
+
 """
 
 app = FastAPI(
@@ -21,8 +27,8 @@ app = FastAPI(
     description=description,
     docs_url='/',
 )
-
-app.include_router(db.router, tags=['Database'])
+# tags to show on FatsAPI 
+# app.include_router(db.router, tags=['Database'])
 app.include_router(ml.router, tags=['Machine Learning'])
 app.include_router(viz.router, tags=['Visualization'])
 
