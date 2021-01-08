@@ -1,4 +1,5 @@
-"""Database functions"""
+"""Database functions
+   This file came from the scaffold template. Not used. left it for future cohort."""
 
 import os
 
@@ -26,15 +27,15 @@ async def get_db() -> sqlalchemy.engine.base.Connection:
     finally:
         connection.close()
 
+# Not used. commented out to not be shown on front page of api
+# @router.get('/info')
+# async def get_url(connection=Depends(get_db)):
+#     """Verify we can connect to the database, 
+#     and return the database URL in this format:
 
-@router.get('/info')
-async def get_url(connection=Depends(get_db)):
-    """Verify we can connect to the database, 
-    and return the database URL in this format:
+#     dialect://user:password@host/dbname
 
-    dialect://user:password@host/dbname
-
-    The password will be hidden with ***
-    """
-    url_without_password = repr(connection.engine.url)
-    return {'database_url': url_without_password}
+#     The password will be hidden with ***
+#     """
+#     url_without_password = repr(connection.engine.url)
+#     return {'database_url': url_without_password}
