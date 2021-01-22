@@ -4,3 +4,7 @@
 from fastapi import APIRouter
 
 router = APIRouter()
+
+@router.get('/visualization')
+async def visualization():
+   return "to do"

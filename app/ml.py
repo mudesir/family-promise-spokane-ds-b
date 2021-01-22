@@ -31,7 +31,7 @@ class PersonInfo(BaseModel):
         assert value >= 0, f'member_id == {value} must be > 0'
         return value
 
-@router.post('/predict')
+@router.get('/predict')
 async def predict(guest_info: PersonInfo):
     '''# Data model base working model 
        # Usage: 

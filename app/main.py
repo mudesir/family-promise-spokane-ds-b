@@ -23,13 +23,13 @@ Edit your app's title and description. See [https://fastapi.tiangolo.com/tutoria
 """
 
 app = FastAPI(
-    title='Family Promise of Spokane - Labs 29 ',
+    title='Family Promise of Spokane - Labs 30 ',
     description=description,
     docs_url='/',
 )
 # tags to show on FatsAPI 
 # app.include_router(db.router, tags=['Database'])
-app.include_router(ml.router, tags=['Machine Learning'])
+app.include_router(ml.router, tags=['Data Science and Machine Learning'])
 app.include_router(viz.router, tags=['Visualization'])
 
 app.add_middleware(
